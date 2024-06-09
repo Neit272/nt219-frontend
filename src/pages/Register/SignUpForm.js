@@ -117,7 +117,7 @@ function SignUpForm() {
 
     if (!hasError) {
       try {
-        const response = await fetch("http://localhost:8000/signup/", {
+        const response = await fetch("https://nt219-backend.onrender.com/signup/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -141,7 +141,7 @@ function SignUpForm() {
           message.success("Đăng ký thành công");
           localStorage.setItem("cccd", formDataSignUp.CCCD);
 
-          const loginResponse = await fetch("http://localhost:8000/token", {
+          const loginResponse = await fetch("https://nt219-backend.onrender.com/token", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
