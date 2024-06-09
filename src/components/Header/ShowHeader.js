@@ -19,7 +19,7 @@ const ShowHeader = () => {
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (token) {
-      fetch("http://localhost:8000/users/me/", {
+      fetch("https://nt219-backend.onrender.com/users/me/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
