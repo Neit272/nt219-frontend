@@ -7,7 +7,7 @@ const CallVerify = () => {
   const { gdc_id } = useParams(); // Extract gdc_id from the URL
 
   useEffect(() => {
-    fetch(`http://localhost:8000/verify/${gdc_id}`, {
+    fetch(`https://nt219-backend.onrender.com/verify/${gdc_id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
