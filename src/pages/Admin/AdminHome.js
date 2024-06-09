@@ -60,7 +60,7 @@ const AdminHome = () => {
   }, []);
 
   const loadAllGdc = async () => {
-    const response = await fetch(`http://localhost:8000/load_all_gdc`, {
+    const response = await fetch(`https://nt219-backend.onrender.com/load_all_gdc`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("access_token")}`,
       },
@@ -92,7 +92,7 @@ const AdminHome = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/sign", {
+      const response = await fetch("https://nt219-backend.onrender.com/sign", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
