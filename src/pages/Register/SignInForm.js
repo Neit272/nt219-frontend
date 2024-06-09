@@ -86,6 +86,7 @@ function SignInForm() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+            mode: 'no-cors'
         },
         body: JSON.stringify({
           username: formDataSignIn.CCCD,
@@ -99,6 +100,7 @@ function SignInForm() {
             fetch("https://nt219-backend.onrender.com/users/me", {
               headers: {
                 Authorization: `Bearer ${data.access_token}`,
+                  mode: 'no-cors'
               },
             })
               .then((response) => response.json())
