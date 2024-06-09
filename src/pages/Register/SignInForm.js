@@ -82,7 +82,7 @@ function SignInForm() {
     } else {
       console.log(formDataSignIn);
 
-      fetch("http://localhost:8000/token", {
+      fetch("https://nt219-backend.onrender.com/token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -96,7 +96,7 @@ function SignInForm() {
         .then((data) => {
           if (data.access_token) {
             localStorage.setItem("access_token", data.access_token);
-            fetch("http://localhost:8000/users/me", {
+            fetch("https://nt219-backend.onrender.com/users/me", {
               headers: {
                 Authorization: `Bearer ${data.access_token}`,
               },
