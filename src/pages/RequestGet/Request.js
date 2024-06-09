@@ -12,7 +12,7 @@ const Request = () => {
   useEffect(() => {
     const loadGdc = async () => {
       const cccd = localStorage.getItem("cccd");
-      const response = await fetch(`http://localhost:8000/load_gdc/${cccd}`);
+      const response = await fetch(`https://nt219-backend.onrender.com/load_gdc/${cccd}`);
       const gdcList = await response.json();
 
       if (!Array.isArray(gdcList)) {
@@ -36,7 +36,7 @@ const Request = () => {
   }, []);
 
   const handleDownload = (record) => {
-    window.location.href = `http://localhost:8000/download_signed/${record.marketPassId}`;
+    window.location.href = `https://nt219-backend.onrender.com/download_signed/${record.marketPassId}`;
   };
 
   const showModal = () => {
@@ -50,7 +50,7 @@ const Request = () => {
     }
 
     const cccd = localStorage.getItem("cccd");
-    const response = await fetch("http://localhost:8000/request_sign", {
+    const response = await fetch("https://nt219-backend.onrender.com/request_sign", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
