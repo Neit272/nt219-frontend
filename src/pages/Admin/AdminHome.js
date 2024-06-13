@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button, Tag } from "antd";
+import { Table, Button, Tag, message } from "antd";
 import "../../styles/AdminHome.css";
 
 const columns = [
@@ -113,10 +113,10 @@ const AdminHome = () => {
           return updatedData;
         });
       } else {
-        console.error("Failed to sign:", responseData);
+        message.error("Failed to sign:", responseData);
       }
     } catch (error) {
-      console.error("Failed to sign:", error);
+      message.error("Failed to sign:", error);
     }
   };
 
